@@ -260,7 +260,7 @@ def danger_map(request):
         icon = folium.features.CustomIcon(icon_image=mkurl,icon_size=(50,50))
         
         # han : 이미지 띄우기
-        danger_detail_img_dir = "../safety_map/media/"+str(loc.danger_img)
+        danger_detail_img_dir = "media/"+str(loc.danger_img)
         pic = base64.b64encode(open(danger_detail_img_dir,'rb').read()).decode()
         image_tag = '<body><div style="text-align:center;"><img src="data:image/jpeg;base64,{}" width="120"><div>'.format(pic)
         detail_tag = '<br><span style="color:#015462;font-weight:bold;">{}</span></body>'.format(str(loc.danger_type))
